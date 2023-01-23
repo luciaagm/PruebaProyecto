@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/estiloIndex.css">
+	<link rel="stylesheet" href="css/estiloMenuDesplegable.css">
+	<link rel="stylesheet" href="css/estiloTrayectoria.css">
+	<title></title>
+</head>
+<body>
+	<!-- Header común -->
+	<header>
+		<a href="index.html"><img src="imagenes/icono3.png"></a>
+			<button class="abrir">
+				<span></span> 
+				<span></span>
+				<span></span>
+			</button> 
+			<nav>
+				<button class="cerrar">x</button>
+				<ul> 
+					<li><a href="trayectoria.html">Trayectoria</a></li>
+					<li><a href="skills.html">Skills</a></li>
+					<li><a href="contacto.html">Contacto</a></li>
+				</ul>
+			</nav>
+	</header>
+
+	<!-- Sección con la clase contenedor que abarca todo el contenido de la página trayectoria.
+		Tres div con la clase cuadro que contienen a su vez una imagen y texto y tres div con la clase cuadro estrecho que unen a los anteriores -->
+	<section class="contenedor">
+		<h1 class="titulo"></h1>
+		<div class="cuadro uno">
+			<img src="imagenes/trabajo.png">
+			<p>Hice la carrera de Ingeniería en Tecnologías de la Telecomunicación en la Universidad de Granada</p>
+		</div>
+		<div class="cuadro estrecho"></div>
+		<div class="cuadro dos">
+			<img src="imagenes/estudio.png">
+			<p>Desde pequeña siempre me ha encantado diseñar y crear, por lo que decidí juntar esta pasión con el mundo de la programación que aprendí en la universidad</p>
+		</div>
+		<div class="cuadro estrecho"></div>
+		<div class="cuadro tres">
+			<img src="imagenes/trabajo.png">
+			<p>Para ello, me formé estudiando un máster en diseño web sobre HTML, CSS y JS</p>
+		</div>
+		<div class="cuadro estrecho"></div>
+	</section>
+
+	<script src="js/funciones.js"></script>
+</body>
+</html>

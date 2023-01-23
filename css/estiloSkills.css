@@ -1,0 +1,82 @@
+/* ESTILO DEL CONTENIDO DEL SKILLS.HTML */
+	body{
+		background-color:#6CD9E1;
+		background-image:linear-gradient(to right bottom,#1DDEC7 40%,#ABF8C1 60%); 
+	}
+	div.habilidades{
+		display:flex;
+		justify-content:center;
+		align-items:center;
+	}
+	p{
+		width:355px;
+		letter-spacing:1px;
+		margin-top:40px;
+		font-size:40px;
+	}
+/* ESTILO DE LA GALERÍA DE IMÁGENES */
+	.galeria{
+		width:500px;
+		display:grid;
+		grid-template-columns:repeat(3,auto);
+		gap:20px;
+	}
+	.galeria a{
+		display:block;
+	}
+	.galeria img{
+		display:block;
+		width:100%;
+		background-color:#16DBAA;
+		border-radius:20%;
+		opacity:0.2;
+		filter:blur(3px);
+	}
+	.galeria a:hover img{
+		filter:blur(0);
+	}
+	.modal{
+		position:fixed;
+		top:0;
+		left:0;
+		width:100%;
+		height:100vh;
+		background-color:#C8C6E1;
+		opacity:0.8;
+		display:none;
+		justify-content:center;
+		align-items:center;
+	}
+	.visible{
+		display:flex;
+	}
+	.modal img{
+		display: block;
+		width:500px;
+	}
+	.modal button{
+		-webkit-appearance:none; 
+		appearance:none;
+		border:none;
+		background-color:transparent;
+		color:black;
+		font-size:5em;
+		margin:0 20px;
+		cursor:pointer;
+	}
+
+/* FORMATO RESPONSIVE */
+	@media screen and (max-width: 901px){
+		.galeria{
+			width:40%;
+			grid-template-columns:repeat(2,auto);
+		}
+		p{
+			font-size: 30px;
+		}
+	}
+	@media screen and (max-width: 501px){
+		.galeria{
+			grid-template-columns:repeat(1,auto);
+		}
+	}

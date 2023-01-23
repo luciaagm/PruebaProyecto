@@ -1,0 +1,88 @@
+/* ESTILO DEL CONTENIDO DE CONTACTO.HTML */
+	body{
+		background-image:linear-gradient(to right bottom,#C1ACFF 40%,#85D2FF 60%);
+		background-attachment:fixed;
+		background-size: cover;
+	}
+	.formulario h1{
+		font-size:25px;
+		color:#444;
+		text-align:center;
+	}
+	.iconos{ 
+		width:70px;
+		height:100%;
+		margin:100px auto;
+		border-radius:30%;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+	}
+	.iconos img{
+		display:block;
+		width:100px;
+		height:100px;
+		margin:auto;
+	}
+	.iconos p{
+		margin:30px;
+		font-size:1.25em;
+	}
+	/*Al poner el mouse en los iconos, amplían su tamaño*/
+	img:hover{ 
+			animation:ampliar 2s;
+	}
+	@keyframes ampliar{ 
+		0%{
+			transform:scale(1);
+		}
+		50%{
+			transform:scale(1.5);
+		}
+		100%{
+			transform:scale(1);			}
+	}
+
+/* ESTILO DEL FORMULARIO */
+	input{
+		-webkit-appearance:none; 
+		appearance:none;
+		display:block;
+		text-align:center;
+	}
+		form{
+		width:250px;
+		margin:40px auto 0;
+		border:2px solid white;
+		border-radius:10px;
+		padding:10px;
+		background-color:rgba(57, 162, 147, 0.2);
+	}
+	input:not(:first-child){
+		margin-top:20px;
+	}
+	input[type="text"], input[type = "password"]{
+		border:none;
+		border-bottom:1px solid #333;
+		padding:5px;
+		color:#777;
+		width:calc(100% - 10px);
+	}
+	::placeholder{	
+		opacity:1;
+		color:#555;
+	}
+	input[type = "submit"]{
+		border:1px solid #333;
+		border-radius:50%;
+		padding:5px 10px;
+		background-color:white;
+		cursor:pointer;
+		margin:20px auto;
+	}
+/* FORMATO RESPONSIVE */
+	@media screen and (max-width: 501px){
+		.iconos{
+			flex-direction:column;
+		}
+	}

@@ -1,0 +1,197 @@
+/* ESTILO DEL CONTENIDO DEL INDEX.HTML */
+	*{
+		margin:0;
+		padding:0;
+	}
+	body{
+		margin:40px;
+		font-family: 'Poppins', sans-serif;
+		font-weight:100;
+		min-height:100vh; 
+		display:flex; 
+		justify-content:space-between; 
+		flex-direction:column; 
+	}
+	header{
+		padding:20px;
+		border-bottom:1px dashed #999;;
+		display:flex; 
+		justify-content:space-between;
+		align-items:center;
+	}
+	header img{
+		height:100px;
+		width:100px;
+	}
+	nav	ul{
+		list-style:none; 
+		font-size:1em;
+		display:flex; 
+	}
+	nav li{
+		margin-right:30px;		
+	}
+	nav a{
+		text-decoration:none; 
+		color:#333;
+		font-size:30px;
+	}
+	h2.contenido{
+		margin-top:100px;
+		font-size:50px;
+		color:white;
+		text-shadow:10px 5px 0 rgba(50, 50, 50, 0.4);
+		letter-spacing:3px;
+		text-align: center;
+	}
+	.contenido{
+		width:80%; 
+		padding:20px 0; 
+		margin:0 auto; 
+		color:white;
+		text-align:center;
+	}
+	.contenido :not(:first-child){
+		margin-top:50px;
+	}
+	.contenido h2{
+		font-family:'Roboto', sans-serif;
+		font-weight:400;
+		font-size:3em;
+		margin-top: 40px;
+	}
+	.contenido h3{
+		font-size:2em;
+	}
+	.contenido p{
+		font-size:1.5em;
+	}
+	.fondo{
+		z-index:-1;
+	}
+	footer{
+		padding:50px;
+		margin-top: 40px;
+		border-top:1px dashed #999;
+		color:white;
+	}
+	footer p{
+		font-size:1.5em;
+		text-align:center;	
+	}
+	footer a{
+		text-decoration:none; 
+		color:white;
+	}
+
+/* ESTILO DE LAS TRES OPCIONES DEL BODY (CÍRCULOS) QUE DIRIGEN A LAS PÁGINAS INTERNAS */
+	.opciones{
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		margin-top:-50px;
+	}
+	.skills, .trayectoria, .contacto{
+		background-color:rgb(24, 234, 248);
+		filter:opacity(70%);
+		border:2px dashed whitesmoke;
+		border-radius:50%;
+		width:200px;
+		height:200px;
+		margin:10px;
+	}
+	.trayectoria{
+		background-color:#E6CA4A;
+	}
+	.contacto{
+		background-color:#9CE644;
+	}
+	.opciones p{
+		font-size:30px;
+		font-weight:bold;
+		letter-spacing:1px;
+		text-align:center;
+		margin-top:80px;
+	}
+	.opciones a{
+		text-decoration: none;
+	}
+
+
+/* ESTILO Y ANIMACIÓN DE LAS FORMAS DEL BACKGROUND */
+	.circulo{ 
+		position:absolute;
+		z-index:-1;
+		width:50%;
+		height:50%;
+		filter: blur(10px);
+		animation: movimientoCirculo 20s linear infinite;
+	}
+	.uno{
+		top:0%;
+		left:0%;
+	}
+	.dos{			
+		top:0%;
+		right:0%;
+	}
+	.tres{
+		bottom:0%;
+		left:0%;
+	}
+	.cuatro{
+		bottom:0%;
+		right:0%;
+	}
+	@keyframes movimientoCirculo{
+		from{
+			transform:rotate(0deg) scale(4);
+		}
+		to{
+			transform:rotate(360deg) scale(4);
+		}
+	}
+
+/* ESTILO DEL BOTÓN DE LA PORTADA */
+	div.portada{
+		margin:-40px;
+		height:100vh;
+		width:100%;
+		background-color:lightgray;
+		position:fixed;
+		z-index:1;
+	}
+	button.inicio{
+ 		text-decoration:none;
+   		padding:50px;
+	    border-radius:50%;
+	    border:2px solid white;
+	    cursor:pointer;
+	    -webkit-appearance:none; 
+		appearance:none;
+		margin:auto;
+   		margin-top:300px;
+  		display:block;
+	}
+	.empezar{ /*al pulsar el botón, se añade la clase .empezar al div y desaparece la portada, mostrando así el resto del contenido de la web*/
+		display:none;
+	}
+
+/* FORMATO RESPONSIVE */
+	@media screen and (max-width: 901px){
+		button.inicio img{	
+			height:400px;
+			width:400px;
+		}
+	}
+		
+	@media screen and (max-width: 501px){
+		button.inicio img{	
+			height:200px;
+			width:200px;
+		}
+		.skills, .trayectoria, .contacto{
+			width:100px;
+			height:100px;
+		}
+	}

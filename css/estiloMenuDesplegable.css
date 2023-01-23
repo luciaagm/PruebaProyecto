@@ -1,0 +1,67 @@
+	/* ESTILO DEL MENÚ DESPLEGABLE */
+
+	.abrir,.cerrar{ /*botones del menú*/
+		display:none;
+	}
+
+	@media screen and (max-width: 800px){
+	/*cuando sea tamaño tablet o menos, el menu va a ocupar todo el espacio*/
+	nav{
+		position:fixed;
+		top:-100vh; 
+		left:0;
+		padding:20px;
+		width:calc(100% - 40px); 
+		height:calc(100% - 40px);
+		background-color:skyblue;
+		transition:top 0.9s; 
+	}
+	.desplegado{
+		top:0;
+		z-index:1;
+	}
+	nav ul{
+		display:block;
+		margin-top:100px;
+		margin-left:100px;
+	}
+	nav li:not(:last-child){
+		margin-right:0;
+	}
+	nav li:not(:first-child){
+		margin-top:20px;
+	}
+	nav a{
+		color:white;
+		font-size:2em;
+	}
+	button{
+		-webkit-appearance:none;
+		appearance:none;
+		background-color:transparent;
+	}
+	.cerrar{
+		display:block; 
+		border:none;
+		font-size:2em;
+		color:white;
+		position:absolute; 
+		top:20px;
+		right:20px;
+		cursor:pointer;
+	}
+	.abrir{
+		display:block;
+		border:1px solid #777;
+		border-radius:5px;
+		width:30px;
+		padding:5px 5px 0;
+		cursor:pointer;
+	}
+	.abrir span{
+		display:block; 
+		height:3px;
+		background-color:black;
+		margin-bottom:5px;
+	}
+}
